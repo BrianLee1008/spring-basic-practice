@@ -1,0 +1,25 @@
+// gradle 은 프로젝트 버전 설정하고 라이브러리 주입하는 용도로 사용정도로 현재는 이해
+
+plugins { // 플러그인 버전
+	id 'org.springframework.boot' version '2.7.2'
+	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11' // 자바 11버전
+
+repositories { // 라이브러리 다운로드 받는 사이트 설정 (특정사이트 Url 설정 가능)
+	mavenCentral()
+}
+
+dependencies { // 라이브러리 디펜던시
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
