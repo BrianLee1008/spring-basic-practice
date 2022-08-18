@@ -1,5 +1,6 @@
 package com.example.hellospring;
 
+import com.example.hellospring.aop.TimeTraceAOP;
 import com.example.hellospring.repository.MemberRepository;
 import com.example.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
